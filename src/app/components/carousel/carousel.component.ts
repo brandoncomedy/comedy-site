@@ -51,6 +51,20 @@ export class CarouselComponent implements OnInit {
 				$(element).css({left:index*self.image_width + "px"});
 			})
 
+			// for (var i = 0; i < this.images.length; i++) {
+
+			// 	if (utility.isMobile()) {
+
+			// 		$("#img" + i).addClass("width height-auto");
+			// 	}
+			// 	else {
+			// 		$("#img" + i).addClass("height width-auto");
+			// 	}
+
+			// }
+
+			
+
 		}, 300);
 
 
@@ -65,7 +79,7 @@ export class CarouselComponent implements OnInit {
 					duration:2000,
 					complete:function () {
 						console.log("left", current, $("#img" + index).css("left"));
-						$("#img" + (current-1)).css({left:(self.num_images-1)*self.image_width + "px"});
+						$("#imgCont" + (current-1)).css({left:(self.num_images-1)*self.image_width + "px"});
 					}
 				});
 

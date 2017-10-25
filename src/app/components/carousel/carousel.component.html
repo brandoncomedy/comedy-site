@@ -5,11 +5,11 @@
 
 		<div class="absolute height black-back cutoff" id="carouselContainer">
 
-			<div class="absolute height imageContainer" *ngFor="let img of images; let i = index" id="{{'img' + i}}">
+			<div class="absolute height imageContainer cutoff" *ngFor="let img of images; let i = index" id="{{'imgCont' + i}}">
 
 				<div class="absolute width height center">
 
-					<img class="absolute width-auto height hcenter" src="{{'/assets/images/' + img}}" />
+					<img class="absolute height width-auto hcenter" src="{{'/assets/images/' + img}}" id="{{'img' + i}}" />
 
 				</div>
 			</div>
