@@ -31,7 +31,7 @@
 
 						<div class="date-time">
 							<div class="dateTimeInner">
-								{{date.date}}
+								{{date.dateString}}
 							</div>
 						</div>
 
@@ -39,7 +39,7 @@
 
 					<div class="tickets">
 
-						<p class="relative height"> tickets: <a class="relative height" href="{{date.tickets.link + date.tickets.text}}"> {{date.tickets.text}} </a></p>
+						<p class="relative height"> tickets: <a class="relative height" href="{{date.tickets.link + date.tickets.text + '?subject=' + date.tickets.subjectString + '&body=' + date.tickets.bodyString}}" target="_blank"> {{date.tickets.text}} </a></p>
 
 					</div>
 

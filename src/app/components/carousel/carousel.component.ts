@@ -29,7 +29,7 @@ export class CarouselComponent implements OnInit {
 
 		let self = this;
 
-		let img = this.data.getImages();
+		let img = this.data.getData("carousel");
 
 		this.images = img.slice(0,3);
 		this.num_images = this.images.length;
@@ -41,31 +41,14 @@ export class CarouselComponent implements OnInit {
 
 		setTimeout(() => {
 
-			$("#carouselContainer").css({width:this.carousel_width});
-			$(".imageContainer").css({width:this.image_percent})
-
-			self.image_width = $("#carouselFrame").width();
-
-			$(".imageContainer").each((index, element) => {
-
-				$(element).css({left:index*self.image_width + "px"});
-			})
-
-			// for (var i = 0; i < this.images.length; i++) {
-
-			// 	if (utility.isMobile()) {
-
-			// 		$("#img" + i).addClass("width height-auto");
-			// 	}
-			// 	else {
-			// 		$("#img" + i).addClass("height width-auto");
-			// 	}
-
-			// }
-
-			
+			self.setup();
 
 		}, 300);
+
+		// $(window).resize(() => {
+
+		// 	self.setup();
+		// });
 
 
 		carousel.config({total:this.num_images, interval:5000, callback:(current) => {
@@ -96,6 +79,20 @@ export class CarouselComponent implements OnInit {
 	ngOnInit() {
 
 		
+	}
+
+	setup () {
+
+		$("#carouselContainer").css({width:this.carousel_width});
+		$(".imageContainer").css({width:this.image_percent})
+
+		this.image_width = $("#carouselFrame").width();
+
+		$(".imageContainer").each((index, element) => {
+
+			$(element).css({left:index*this.image_width + "px"});
+		})
+			
 	}
 
 	run() {

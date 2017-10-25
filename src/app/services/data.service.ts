@@ -5,35 +5,28 @@ import { AppConfig } from "../app.config";
 @Injectable()
 export class DataService {
 
-	images = [];
-	dates = [];
+	data = {};
 
 	constructor(private config:AppConfig) { 
 
-		var img = this.config.getConfig("images");
+		let carouselImages = this.config.getConfig("carousel").images;
 
-		for (var i in img) {
+		this.data["carousel"] = carouselImages;
 
-			this.images.push(img[i]);
-		}
+		let dates = this.config.getConfig("dates");
 
-		this.dates = this.config.getConfig("dates");
+		this.data["dates"] = dates;
 
-		// for (var i in d) {
+		let monthNames = this.config.getConfig("monthNames")
 
-		// 	this.dates.push(d[i]);
-		// }
+		this.data["monthNames"] = monthNames;
+
 	}
 
 
-	public getImages () {
+	public getData (what) {
 
-		return this.images
-	}
-
-	public getDates () {
-
-		return this.dates;
+		return this.data[what];
 	}
 
 }
