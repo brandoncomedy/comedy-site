@@ -1,0 +1,192 @@
+
+
+.container {
+
+	position:relative;
+	width:60%;
+	left:50%;
+	transform:translate(-50%, 0);
+	border:1px solid white;
+	border-radius:40px;
+	margin-bottom:400px;
+	color:white;
+
+}
+
+.inner {
+
+	position:relative;
+	width:90%;
+	left:50%;
+	transform:translate(-50%, 0);
+}
+
+
+.title {
+
+	position:relative;
+	width:100%;
+	font-size:40px;
+	margin:50px 0;
+}
+
+.date {
+
+	position:relative;
+	width:100%;
+	border-left:1px solid white;
+	margin:100px 0;
+}
+
+.dateInner {
+
+	position:relative;
+	width:80%;
+	left:50%;
+	transform:translate(-50%, 0);
+}
+
+.talent {
+
+	position:relative;
+	width:100%;
+	height:50px;
+	margin:0 20px;
+}
+
+.infoContainer {
+
+	position:relative;
+	width:100%;
+	height:100px;
+	margin-left:50px;
+}
+
+
+.venue {
+
+	position:absolute;
+	width:70%;
+	height:100%;
+}
+
+.date-time {
+
+	position:absolute;
+	width:30%;
+	height:100%;
+	text-align: right;
+	right:0;
+}
+
+.tickets {
+
+	position:relative;
+	width:100%;
+	height:50px;
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+
+
+
+	.container {
+
+		position:relative;
+		width:90%;
+		left:50%;
+		transform:translate(-50%, 0);
+		border:1px solid white;
+		border-radius:40px;
+		margin-bottom:400px;
+		color:white;
+
+	}
+
+	.inner {
+
+		position:relative;
+		width:90%;
+		left:50%;
+		transform:translate(-50%, 0);
+	}
+
+
+	.title {
+
+		position:relative;
+		width:100%;
+		font-size:40px;
+		margin:50px 0;
+	}
+
+	.date {
+
+		position:relative;
+		width:100%;
+		border-left:1px solid white;
+		margin:100px 0;
+	}
+
+	.dateInner {
+
+		position:relative;
+		width:80%;
+		left:50%;
+		transform:translate(-50%, 0);
+	}
+
+	.talent {
+
+		position:relative;
+		width:100%;
+		height:50px;
+		margin:0 20px;
+	}
+
+	.infoContainer {
+
+		position:relative;
+		width:100%;
+		height:100px;
+		margin-left:50px;
+	}
+
+
+	.venue {
+
+		position:relative;
+		width:100%;
+		height:100%;
+	}
+
+	.date-time {
+
+		position:relative;
+		width:100%;
+		height:100%;
+	}
+
+	.tickets {
+
+		position:relative;
+		width:100%;
+		height:50px;
+
+	}
+
+
+
+}
+
+
+
+
+
