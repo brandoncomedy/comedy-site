@@ -6,9 +6,6 @@ import { CarouselService } from "../../services/carousel.service";
 
 import * as $ from 'jquery';
 
-// import utility from "../../../assets/js/utility.js";
-
-declare var utility;
 
 @Component({
   selector: 'app-carousel',
@@ -37,7 +34,7 @@ export class CarouselComponent implements OnInit {
 		this.carousel_width = this.num_images*100 + "%";
 		this.image_percent = 99/this.num_images + "%";
 		
-		console.log("num images", this.num_images);
+		// console.log("num images", this.num_images);
 
 		setTimeout(() => {
 
@@ -45,23 +42,19 @@ export class CarouselComponent implements OnInit {
 
 		}, 300);
 
-		// $(window).resize(() => {
-
-		// 	self.setup();
-		// });
-
-
 		carousel.config({total:this.num_images, interval:5000, callback:(current) => {
 
 			// console.log("callback", current);
 			$(".imageContainer").each((index, element) => {
 
-				let left = utility.truncate($(element).position().left - self.image_width, 0);
+				// let left = utility.truncate($(element).position().left - self.image_width, 0);
+
+				let left = $(element).position().left - self.image_width;
 
 				$(element).stop().animate({left:left + "px"}, {
 					duration:2000,
 					complete:function () {
-						console.log("left", current, $("#img" + index).css("left"));
+						// console.log("left", current, $("#img" + index).css("left"));
 						$("#imgCont" + (current-1)).css({left:(self.num_images-1)*self.image_width + "px"});
 					}
 				});
