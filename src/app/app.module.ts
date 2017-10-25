@@ -15,6 +15,7 @@ import { DatesComponent } from './components/dates/dates.component';
 import { AppConfig } from "./app.config";
 import { DataService } from "./services/data.service";
 import { CarouselService } from "./services/carousel.service";
+import { FooterComponent } from './components/footer/footer.component';
 
 export function startupServiceFactory(config: AppConfig) : Function {
 
@@ -30,7 +31,8 @@ export function startupServiceFactory(config: AppConfig) : Function {
     AppComponent,
     HomeComponent,
     CarouselComponent,
-    DatesComponent
+    DatesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
