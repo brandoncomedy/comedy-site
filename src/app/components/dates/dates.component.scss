@@ -36,6 +36,7 @@
 	width:100%;
 	border-left:1px solid white;
 	margin:100px 0;
+	font-size:25px;
 }
 
 .dateInner {
@@ -51,15 +52,22 @@
 	position:relative;
 	width:100%;
 	height:50px;
-	margin:0 20px;
+	margin:20px 0;
 }
 
 .infoContainer {
 
 	position:relative;
 	width:100%;
-	height:100px;
 	margin-left:50px;
+}
+
+.place {
+
+	position:relative;
+	width:100%;
+	height:50px;
+	margin:20px 0;
 }
 
 
@@ -68,6 +76,14 @@
 	position:absolute;
 	width:70%;
 	height:50px;
+	margin:20px 0;
+}
+
+.venueInner {
+
+	position:absolute;
+	top:50%;
+	transform:translate(0, -50%);
 }
 
 .date-time {
@@ -75,8 +91,16 @@
 	position:absolute;
 	width:30%;
 	height:50px;
+	margin:20px 0;
 	text-align: right;
 	right:0;
+}
+
+.dateTimeInner {
+
+	position:absolute;
+	top:50%;
+	transform:translate(0, -50%);
 }
 
 .tickets {
@@ -84,6 +108,7 @@
 	position:relative;
 	width:100%;
 	height:50px;
+	margin:20px 0;
 
 }
 
@@ -92,94 +117,58 @@
 
 
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 700px) {
 
 
 
 
 	.container {
 
-		position:relative;
 		width:90%;
-		left:50%;
-		transform:translate(-50%, 0);
-		border:1px solid white;
-		border-radius:40px;
-		margin-bottom:400px;
-		color:white;
-
-	}
-
-	.inner {
-
-		position:relative;
-		width:90%;
-		left:50%;
-		transform:translate(-50%, 0);
 	}
 
 
 	.title {
 
-		position:relative;
-		width:100%;
 		font-size:30px;
-		margin:30px 0;
 	}
 
 	.date {
 
-		position:relative;
-		width:100%;
-		border-left:1px solid white;
-		margin:100px 0;
+		font-size:20px;
 	}
 
-	.dateInner {
+	.place {
 
-		position:relative;
-		width:80%;
-		left:50%;
-		transform:translate(-50%, 0);
+		height:150px;
 	}
-
-	.talent {
-
-		position:relative;
-		width:100%;
-		height:50px;
-		margin:0 20px;
-	}
-
-	.infoContainer {
-
-		position:relative;
-		width:100%;
-		height:100px;
-	}
-
 
 	.venue {
 
 		position:relative;
 		width:100%;
-		margin:0 20px;
+	}
+
+	.venueInner {
+
+		position:relative;
 	}
 
 	.date-time {
 
 		position:relative;
 		width:100%;
-		margin:0 20px;
+		text-align:left;
+	}
+
+	.dateTimeInner {
+
+		position:relative;
 	}
 
 	.tickets {
 
-		position:relative;
-		width:100%;
-		height:50px;
-		margin:0 20px;
-		font-size:15;
+		font-size:15px;
 
 	}
 
