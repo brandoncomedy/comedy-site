@@ -1,6 +1,7 @@
 import { BrowserModule, } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { UIRouterModule, UIView } from '@uirouter/angular';
+import { Http, HttpModule } from "@angular/http";
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -11,7 +12,9 @@ import { DatesComponent } from './components/dates/dates.component';
 // import { routerConfigFn } from './router.config';
 
 
-import { AppConfig } from "./app.config" 
+import { AppConfig } from "./app.config";
+import { DataService } from "./services/data.service";
+import { CarouselService } from "./services/carousel.service";
 
 export function startupServiceFactory(config: AppConfig) : Function {
 
@@ -31,13 +34,17 @@ export function startupServiceFactory(config: AppConfig) : Function {
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     UIRouterModule.forRoot({
       states: APP_ROUTES,
-      useHash: true,
+      useHash: false,
       otherwise:{state:"home"}
   	}),
   ],
   providers: [
+  AppConfig,
+  DataService,
+  CarouselService,
   {
 	provide: APP_INITIALIZER,
 	useFactory: startupServiceFactory,

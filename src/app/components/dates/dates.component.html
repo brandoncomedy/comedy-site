@@ -1,3 +1,54 @@
-<p>
-  dates works!
-</p>
+
+
+<div class="relative width60 hcenter border-white rounded40 white font-25 margin-bottom-400" id="dateBox">
+
+	<div class="relative width90 hcenter">
+
+		<div class="relative width margin-v-50 font-40">
+			<div class="relative vcenter">
+				Events
+			</div>
+		</div>
+
+		<div class="relative width hcenter border-left-white margin-v-100" *ngFor="let date of dates">
+			
+			<div class="relative width80 hcenter">
+
+				<div class="relative width height-50 margin-v-20">
+					<div class="absolute vcenter">
+						{{date.talent}}
+					</div>
+				</div>
+
+				<div class="relative width height-100 margin-left-50">
+
+					<div class="relative width height-50">
+						<div class="absolute width70 height">
+							<div class="absolute vcenter">
+								{{date.venue}}
+							</div>
+						</div>
+
+						<div class="absolute width30 height text-right right0">
+							<div class="absolute vcenter">
+								{{date.date}}
+							</div>
+						</div>
+
+					</div>
+
+					<div class="relative width height-50">
+
+						<p class="relative height"> tickets: <a class="relative height" href="{{date.tickets.link + date.tickets.text}}"> {{date.tickets.text}} </a></p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
