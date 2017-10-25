@@ -53,7 +53,7 @@ export class CarouselComponent implements OnInit {
 
 		carousel.config({total:this.num_images, interval:5000, callback:(current) => {
 
-			console.log("callback", current);
+			// console.log("callback", current);
 			$(".imageContainer").each((index, element) => {
 
 				let left = utility.truncate($(element).position().left - self.image_width, 0);

@@ -30,11 +30,11 @@ export class CarouselService {
 
 		this.current++;
 
-		console.log("next increment current", this.current);
+		// console.log("next increment current", this.current);
 
 		if (this.current > this.total) {
 			this.current = 1;
-			console.log("reset current", this.current);
+			// console.log("reset current", this.current);
 		}
 
 		this.callback(this.current);
